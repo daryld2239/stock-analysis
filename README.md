@@ -312,13 +312,13 @@
 
 ##### The changes I made to the code proved to be successful. The time improved from 0.6484375 seconds to 0.1328125 for 2017, and, 0.65625 to 0.2328125 for 2018.
 
-![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202018.png)
+![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/2018%20Time.png)
 
 ![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png)
+
+![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202017%20Time.png)
 
 ![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/2017%20Time.png)
-
-![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png)
 
 ## Summary
 
