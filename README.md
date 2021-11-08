@@ -151,7 +151,7 @@
        
         startTime = Timer
         
- '1)  Format the output sheet on the "All Stocks Analysis" worksheet.
+ 	'1)  Format the output sheet on the "All Stocks Analysis" worksheet.
     
     'Activate "All Stocks Analysis" Worksheet
     Worksheets("All Stocks Analysis").Activate
@@ -164,7 +164,7 @@
                 Cells(3, 2).Value = "Total Daily Volue"
                 Cells(3, 3).Value = "Return"
         
-'2) Initialize an array of all tickers.
+	'2) Initialize an array of all tickers.
     
     'Declare an array with 12 string elements
     Dim tickers(12) As String
@@ -182,24 +182,24 @@
         tickers(10) = "TERP"
         tickers(11) = "VSLR"
     
-'3) Preparre for the analysis of all stickers
+	'3) Preparre for the analysis of all stickers
 
-'3a) Initialize variables for the starting price and ending price.
+	'3a) Initialize variables for the starting price and ending price.
        
        'Creating a Variable for Starting & Ending Price
       Dim startingPrice As Single
       Dim endingPrice As Single
 
-'3b) Activate the data worksheet.
+	'3b) Activate the data worksheet.
     
     Worksheets(yearValue).Activate
     
-'3c) Find the number of rows to loop over.
+	'3c) Find the number of rows to loop over.
     
         RowCount = Cells(Rows.Count, "A").End(xlUp).Row
  
  
- '4)  Loop through the tickers.
+ 	'4)  Loop through the tickers.
        
     For I = 0 To 11
     
@@ -303,8 +303,8 @@
 
 ##### There is a great difference between the performance of the renewable energy stocks from 2017 to 2018. ENPH and RUN made a positive ROI in both years. Majority of the  stock had a decline in volume in the year 2018.
 
-! [This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202017.png)
-! [This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202018.png)
+![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202017.png)
+![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202018.png)
 
 ##### Before Steven produces this information to his parents, he should observe the industry related and investment reasons they should invest. By observing the data, it would be better for his parents to invest an other industries.
 
@@ -312,13 +312,13 @@
 
 ##### The changes I made to the code proved to be successful. The time improved from 0.6484375 seconds to 0.1328125 for 2017, and, 0.65625 to 0.2328125 for 2018.
 
-! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2018%20Time.png
+![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2018%20Time.png
 
-! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
+![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
 
-! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2017%20Time.png
+![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2017%20Time.png
 
-! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
+![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
 
 ## Summary
 
