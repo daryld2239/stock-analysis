@@ -1,10 +1,10 @@
 # Green Stock Analysis
 
-##Object Overview
+## Object Overview
 
-###Background
+### Background
 
-####Steve knew how to use Excel, but he needed  assistance  analyzing data to help his parents invest in renewable energy. He had all the information necessary and wanted a more efficient	way to view the data. By using Visual Basic Application (VBA), I was able to create an useable interactive code within Excel to present each stocks return on investment and annual volume. By doing so, I was able to help Steve view 12 renewable stocks with a click of a button.
+#### Steve knew how to use Excel, but he needed  assistance  analyzing data to help his parents invest in renewable energy. He had all the information necessary and wanted a more efficient	way to view the data. By using Visual Basic Application (VBA), I was able to create an useable interactive code within Excel to present each stocks return on investment and annual volume. By doing so, I was able to help Steve view 12 renewable stocks with a click of a button.
 
 ### Purpose
 
@@ -16,9 +16,9 @@
 	
 #### In order to make this more efficient, I generated three new arrays for the code: -tickersVolumes(12) to hold volume - tickerStartingPrices(12) to hold starting price -tickerEnding(12) to hold ending price. These arrays hold the data for the loop. By creating the ticker array in the original code establishes a ticker symbol that can be called for each stock. Then  by genernating a variable named ticker index, I was able to match the three arrays with the tickers. With the arrays  constructed, I’m able to operate the Nested For Loops and variables to loop through the data and complete the analysis.
 
-####Refactored
+#### Refactored
 
-#####Sub AllStocksAnalysisRefactored()
+##### Sub AllStocksAnalysisRefactored()
     
     Dim startTime As Single
     Dim endTime  As Single
@@ -142,7 +142,7 @@
 
 #### Original
 
-#####Sub AllStocksAnalysis()
+##### Sub AllStocksAnalysis()
       
      Dim startTime As Single
      Dim endTime As Single
@@ -151,7 +151,7 @@
        
         startTime = Timer
         
- '1.  Format the output sheet on the "All Stocks Analysis" worksheet.
+ '1)  Format the output sheet on the "All Stocks Analysis" worksheet.
     
     'Activate "All Stocks Analysis" Worksheet
     Worksheets("All Stocks Analysis").Activate
@@ -164,7 +164,7 @@
                 Cells(3, 2).Value = "Total Daily Volue"
                 Cells(3, 3).Value = "Return"
         
-'2.  Initialize an array of all tickers.
+'2) Initialize an array of all tickers.
     
     'Declare an array with 12 string elements
     Dim tickers(12) As String
@@ -182,24 +182,24 @@
         tickers(10) = "TERP"
         tickers(11) = "VSLR"
     
-'3. Preparre for the analysis of all stickers
+'3) Preparre for the analysis of all stickers
 
-'3a.Initialize variables for the starting price and ending price.
+'3a) Initialize variables for the starting price and ending price.
        
        'Creating a Variable for Starting & Ending Price
       Dim startingPrice As Single
       Dim endingPrice As Single
 
-'3b.Activate the data worksheet.
+'3b) Activate the data worksheet.
     
     Worksheets(yearValue).Activate
     
-'3c.Find the number of rows to loop over.
+'3c) Find the number of rows to loop over.
     
         RowCount = Cells(Rows.Count, "A").End(xlUp).Row
  
  
- '4.  Loop through the tickers.
+ '4)  Loop through the tickers.
        
     For I = 0 To 11
     
@@ -207,14 +207,14 @@
         totalVolume = 0
         
        
-       '5.  Loop through rows in the data.
+       '5)  Loop through rows in the data.
     
         'Activate Data Worksheet
         Worksheets(yearValue).Activate
         
         For j = 2 To RowCount
 
-      '5a. Find the total volume for the current ticker.
+      '5a) Find the total volume for the current ticker.
       
       'Identify ticker
       If Cells(j, 1).Value = ticker Then
@@ -224,7 +224,7 @@
         End If
         
         
-        '5b. Find the starting price for the current ticker.
+        '5b) Find the starting price for the current ticker.
     
         If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
 
@@ -232,7 +232,7 @@
 
         End If
 
-        '5c. Find the ending price for the current ticker.
+        '5c) Find the ending price for the current ticker.
     
         If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
 
@@ -242,7 +242,7 @@
 
     Next j
     
-    '6.  Output the data for the current ticker.
+    '6)  Output the data for the current ticker.
         Worksheets("All Stocks Analysis").Activate
         Cells(4 + I, 1).Value = ticker
         Cells(4 + I, 2).Value = totalVolume
@@ -304,7 +304,7 @@
 ##### There is a great difference between the performance of the renewable energy stocks from 2017 to 2018. ENPH and RUN made a positive ROI in both years. Majority of the  stock had a decline in volume in the year 2018.
 
 ! [This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202017.png)
-![This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202018.png)
+! [This is an image](https://github.com/daryld2239/stock-analysis/blob/main/Resources/Stocks%202018.png)
 
 ##### Before Steven produces this information to his parents, he should observe the industry related and investment reasons they should invest. By observing the data, it would be better for his parents to invest an other industries.
 
@@ -312,15 +312,15 @@
 
 ##### The changes I made to the code proved to be successful. The time improved from 0.6484375 seconds to 0.1328125 for 2017, and, 0.65625 to 0.2328125 for 2018.
 
-![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2018%20Time.png
+! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2018%20Time.png
 
-![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
+! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
 
-![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2017%20Time.png
+! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/2017%20Time.png
 
-![This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
+! [This is an image]https://github.com/daryld2239/stock-analysis/blob/main/Resources/Refactored%202018%20Time.png
 
-##Summary
+## Summary
 
 ### Advantages of refactoring code
 
